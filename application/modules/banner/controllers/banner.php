@@ -178,7 +178,11 @@ class Banner extends MX_Controller {
 					'url' 				=> $this->input->post('banner_url'),
 					'banner_post' 		=> $this->input->post('banner_post'),
 					'status' 			=> $this->input->post('banner_status'),
+					'start_date' 		=> date('Y-m-d H:m:s',strtotime($this->input->post('start_date'))),
+					'end_date' 			=> date('Y-m-d H:m:s',strtotime($this->input->post('end_date'))),
+
 				);
+				// echo '<pre>';print_r($data);die;
 				$this->all_model->create_data('tbl_banner',$data);
 
 				$idb						= $this->db->insert_id();

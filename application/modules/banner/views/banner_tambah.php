@@ -64,6 +64,32 @@
 		</div>
 	</div>
 
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Banner Start Date</label>
+		<div class="col-sm-5">
+			<div class="input-group">
+				<input type="text" name="start_date" id="start_date" class="form-control" value="<?=date("d-m-Y H:m:s")?>" required>
+				<span class="input-group-btn">
+				<button class="btn btn-default" type="button" id="f_btn1"><span class="glyphicon glyphicon-calendar"></span></button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Banner End Date</label>
+		<div class="col-sm-5">
+			<div class="input-group">
+				<input type="text" name="end_date" id="end_date" class="form-control" value="<?=date("d-m-Y H:m:s")?>" required>
+				<span class="input-group-btn">
+				<button class="btn btn-default" type="button" id="f_btn2"><span class="glyphicon glyphicon-calendar"></span></button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+
+
 	<div class="form-group" style="margin-top:20px;">
 		<div class="col-sm-offset-2 col-sm-10">
 			<div class="row">
@@ -83,6 +109,13 @@
  </div>
 </div>
 
+
+
+<script src="<?=ASSETS_OTHER?>src/js/jscal2.js"></script>
+<script src="<?=ASSETS_OTHER?>src/js/jscal2.js"></script>
+<script src="<?=ASSETS_OTHER?>src/js/lang/id.js"></script>
+<link rel="stylesheet" type="text/css" href="<?=ASSETS_OTHER?>src/css/steel/steel.css" />
+
 <script type="text/javascript">
 	 function readURL(input) {
         if (input.files && input.files[0]) {
@@ -99,5 +132,13 @@
     $("#banner_img").change(function () {
         readURL(this);
     });
+
+
+    var cal = Calendar.setup({
+		  showTime     	: 24,
+          onSelect		: function(cal) { cal.hide() }
+      });
+      cal.manageFields("f_btn1", "start_date", "%d-%m-%Y %H:%M:%S");
+      cal.manageFields("f_btn2", "end_date", "%d-%m-%Y %H:%M:%S");
 
 </script>
