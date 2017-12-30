@@ -78,8 +78,8 @@ $route['sosmed/create'] = "weblink/create";
 $route['sosmed/delete/(:any)'] = "weblink/delete/$1";
 
 /* banner */
-$route['banner'] = "banner/index/0/5";
-$route['banner/hal/(:any)'] = "banner/hal/0/5/$1";
+$route['banner'] = "banner/index";
+$route['banner/hal/(:any)'] = "banner/hal/$1";
 $route['banner/edit/(:any)']    = "banner/edit/$1";
 $route['banner/update'] = "banner/update";
 $route['banner/insert'] = "banner/insert";

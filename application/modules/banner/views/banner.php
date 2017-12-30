@@ -31,14 +31,15 @@
 			?>
 			<tr>
 				<td><?=$i?></td>
-				<td><?=$tp['nama']?></td>
-				<td><?=$tp['link']?></td>
-				<td class="tc"><?=$tp['urutan']?></td>
+				<td><?=$tp['banner_name']?></td>
+				<td><img id="img_preview" height="60px" src="<?=base_url();?>statis/banner/<?=$tp['img'];?>" /></td>
+				<td class="tc"><?=$tp['url']?></td>
+				<td class="tc"><?=$tp['banner_post']?></td>
 				<td class="tc">
-					<a href="<?=base_url().$this->uri->segment(1)?>/edit/<?=$tp['id']?>/<?=url_title($tp['nama'],'-',TRUE)?>" class="btn btn-primary btn-xs" title="edit"><span class="glyphicon glyphicon-pencil"></span></a>
+					<a href="<?=base_url().$this->uri->segment(1)?>/edit/<?=$tp['id']?>" class="btn btn-primary btn-xs" title="edit"><span class="glyphicon glyphicon-pencil"></span></a>
 				</td>
 				<td class="tc">
-					<a href="<?=base_url().$this->uri->segment(1)?>/delete/<?=$tp['id']?>/<?=url_title($tp['nama'],'-',TRUE)?>" onClick="return confirm('Anda yakin ingin menghapus konten ini???')" class="btn btn-danger btn-xs" title="hapus"><span class="glyphicon glyphicon-trash"></span></a>
+					<a href="<?=base_url().$this->uri->segment(1)?>/delete/<?=$tp['id']?>" onClick="return confirm('Anda yakin ingin menghapus konten ini???')" class="btn btn-danger btn-xs" title="hapus"><span class="glyphicon glyphicon-trash"></span></a>
 				</td>
 			</tr>
 			<?php
