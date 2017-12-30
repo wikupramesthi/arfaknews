@@ -28,7 +28,7 @@
 	  <link href="<?=ASSETS_SBADMIN?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   </head>
-  <body>	
+  <body>
    <div id="wrapper">
    	 <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -43,8 +43,8 @@
             </div>
             <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right"> 
-                <li class="view-website"><a href="<?php base_url();?>" target=_"blank" class="btn btn-success">View Website</a></li>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="view-website"><a href="<?=site_url();?>" target=_"blank" class="btn btn-success">View Website</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
