@@ -7,14 +7,14 @@ class Channel extends MX_Controller {
         parent::__construct();
 		$this->load->model('all_model');
     }
-	
+
 	public function index()
 	{
 		if ($this->session->userdata('status_admn') == 'superadmin' || $this->session->userdata('status_admn') == 'admin'){
 			$data['header'] 	= modules::run('global/header/atas');
 			$data['footer'] 	= modules::run('global/footer/bawah');
 			$data['content'] 	= modules::run('channel/tabel');
-		
+
 			$this->load->view('template',$data);
 		} else {
 			redirect('login');
@@ -27,7 +27,7 @@ class Channel extends MX_Controller {
 			$data['header'] 	= modules::run('global/header/atas');
 			$data['footer'] 	= modules::run('global/footer/bawah');
 			$data['content'] 	= modules::run('channel/tabel',$page);
-		
+
 			$this->load->view('template',$data);
 		} else {
 			redirect('login');
@@ -41,13 +41,13 @@ class Channel extends MX_Controller {
 			$offset = 0;
 		else:
 			$offset = ($page-1) * $limit;
-		endif;	
-		
+		endif;
+
 		$data["d"] 					= $this->all_model->lihat_tabel_kondisi_all("tbl_channel","order by id ASC limit ".$offset.",".$limit."");
 		$tot_hal 					= $this->all_model->hitung_isi_1tabel("tbl_channel","");
 		$data["off"] 				= $limit;
 		$data["hal"] 				= $page;
-		
+
 		$config['base_url'] 		= base_url().'channel/page/';
 		$config['total_rows'] 		= $tot_hal->num_rows();
 		$config['per_page'] 		= $limit;
@@ -84,7 +84,7 @@ class Channel extends MX_Controller {
 			$data['header'] 	= modules::run('global/header/atas');
 			$data['footer'] 	= modules::run('global/footer/bawah');
 			$data['content'] 	= modules::run('channel/edit_data',$kode);
-		
+
 			$this->load->view('template',$data);
 		} else {
 			redirect('login');
@@ -102,9 +102,9 @@ class Channel extends MX_Controller {
 	{
 		if ($this->session->userdata('status_admn') == 'superadmin' || $this->session->userdata('status_admn') == 'admin'){
 			$kode 			= $this->input->post('id');
-			
+
 			$data = array(
-				'nama' 			=> $this->input->post('nama'),
+				'nama_channel' 	=> $this->input->post('nama'),
 				'tipe' 			=> $this->input->post('tipe'),
 				'flag' 			=> $this->input->post('flag')
 			);
@@ -121,7 +121,7 @@ class Channel extends MX_Controller {
 			$data['header'] 	= modules::run('global/header/atas');
 			$data['footer'] 	= modules::run('global/footer/bawah');
 			$data['content'] 	= modules::run('channel/insert_data');
-		
+
 			$this->load->view('template',$data);
 		} else {
 			redirect('login');
@@ -135,10 +135,10 @@ class Channel extends MX_Controller {
 
 	public function create()
 	{
-		if ($this->session->userdata('status_admn') == 'superadmin' || $this->session->userdata('status_admn') == 'admin'){		
+		if ($this->session->userdata('status_admn') == 'superadmin' || $this->session->userdata('status_admn') == 'admin'){
 			$data = array(
 				'id' 			=> '',
-				'nama' 			=> $this->input->post('nama'),
+				'nama_channel' 	=> $this->input->post('nama'),
 				'tipe' 			=> $this->input->post('tipe'),
 				'flag' 			=> $this->input->post('flag')
 			);

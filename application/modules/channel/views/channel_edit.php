@@ -13,7 +13,7 @@
 	<div class="form-group">
 		<label class="col-sm-2 control-label">Nama Channel</label>
 		<div class="col-sm-10">
-			<input type="text" name="nama" class="form-control" value="<?= $d->nama ?>" required>
+			<input type="text" name="nama" class="form-control" value="<?= $d->nama_channel ?>" required>
 		</div>
 	</div>
 	<div class="form-group">
