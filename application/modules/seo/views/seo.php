@@ -1,7 +1,7 @@
 <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><?=ucfirst($this->uri->segment(1))?></h1>
+                <h1 class="page-header"><?=strtoupper($this->uri->segment(1))?> - Configuration</h1>
             </div>
         </div>
         <div class="row">
