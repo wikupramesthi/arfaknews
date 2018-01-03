@@ -2,7 +2,6 @@ html {
     font-family: sans-serif
 }
 body {
-    background-image: url(../demo/body/5.png);
     background-color: #fff;
     font-size: 14px;
     line-height: 22px;
@@ -782,7 +781,28 @@ ul.page-numbers li span.current {
     -o-transition: all 0.2s;
     transition: all 0.2s
 }
-
+.meta_home {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+.meta_arrow:before {
+    font-size: 12px;
+    margin: 0 5px 0 5px;
+    content: "\f105";
+    font-family: "FontAwesome";
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s
+}
+.editor-name {
+    margin: -15px 0;
+}
+.editor-name span {
+    color: #333;
+    font-weight: 500;
+}
 .full_meta .meta_rating {
     margin-top: 12px;
     float: right
@@ -1004,7 +1024,7 @@ article.post .entry_media .content_slider .slider_caption .thumb_link h3 {
 
 article.post .entry_content {
     overflow: hidden;
-    padding: 15px 0;
+    padding: 5px 0;
     padding-bottom: 0;
     margin-bottom: 15px
 }
@@ -1761,6 +1781,53 @@ img.mfp-img {
     display: none;
  }
 }
+@media screen and (max-width: 992px) {
+#header {
+    display: none;
+ }
+.landing {
+    margin-top: 64px;
+ }
+ .single-post {
+    margin-top: 80px;
+ }
+ .content_slider {
+    margin-bottom: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+ }
+ .widget {
+    margin-bottom: 15px;
+ }
+ .mobile-only ul {
+    padding: 0;
+ }
+.mobile-search-form {
+    margin: 0;
+ }
+ .mb-inner .multipack .list_posts {
+    float: left;
+    padding-left: 0;
+ } 
+ .mb-inner .list_posts .post .item_content h4 {
+     font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0;
+    padding-bottom: 3px;
+}
+ .mb-inner img {
+    height: 45px;
+ }
+ .hg-content h4 {
+    height: 45px !important;
+ }
+}
+@media screen and (min-width: 991px) {
+.mobile-only {
+    display: none;
+ }
+}
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
     .mfp-img-mobile .mfp-image-holder {
         padding-left: 0;
@@ -1952,7 +2019,7 @@ mark, .search_icon_form a, span.format, .tb_widget_tagcloud a:hover, #footer .tb
     height: 40px;
     line-height: 40px;
     text-align: center;
-    z-index: 7
+    z-index: 1;
 }
 .bx-wrapper .bx-controls-direction a.disabled {
     display: none
@@ -3145,9 +3212,6 @@ nav.site_navigation ul.menu > li > a {
     -ms-transform: rotate(360deg);
     transform: rotate(360deg)
 }
-.tb_widget_recent_list .item:hover .item_thumb img {
-    opacity: 0.3
-}
 .tb_widget_recent_list .item .item_thumb .thumb_hover a {
     display: block
 }
@@ -3180,11 +3244,11 @@ nav.site_navigation ul.menu > li > a {
 }
 
 .editor-pick h3 {
-    font-size: 30px !IMPORTANT;
+    font-size: 30px !important;
     padding: 15px 10px;
     padding-bottom: 11px;
-    font-weight: 500 !IMPORTANT;
-    line-height: 24px !IMPORTANT;
+    font-weight: 500 !important;
+    line-height: 24px !important;
     text-align: center;
     height: auto !important;
     display: block !important;
@@ -3203,7 +3267,7 @@ nav.site_navigation ul.menu > li > a {
     font-size: 30px;
     color: #f85050;
     float: left;
-    margin-left: 20px;
+    margin-left: 25px;
     min-height: 60px;
     height: 60px;
     position: relative;
@@ -3351,4 +3415,315 @@ nav.site_navigation ul.menu > li > a {
 }
 #copyright p {
     margin: 0
+}
+
+/*mobile */
+#header-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 300px;
+    top: 0;
+    right: 0;
+    will-change: width;
+    transform: translateZ(0);
+    transition: .3s;
+}
+button,
+input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: "Roboto", "Helvetica", "sans-serif";
+    -webkit-appearance: none;
+}
+.mobile-only .menu {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 12px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+.ripple {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    -webkit-transform: translateZ(0);
+}
+.ripple .rippling {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FFF;
+    pointer-events: none;
+    opacity: .4;
+    transform: translate3d(-50%, -50%, 0);
+}
+#header-mobile {
+    align-items: center;
+    background: #f85050;
+    color: #FFF;
+    position: fixed;
+    z-index: 5;
+}
+#header-mobile .menu {
+    background: url(http://cbwconline.com/IMG/Codepen/Menu.svg) center no-repeat;
+}
+#header-mobile .menu:hover {
+    background-color: #f83c00;
+}
+#header-mobile h1 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+#header-mobile .header-input {
+    background: rgba(255, 255, 255, 0.3);
+    width: 50vw;
+    max-width: 800px;
+    height: 48px;
+    padding: 12px;
+    border-radius: 3px;
+    margin: 5px 15px;
+    color: #FFF;
+    transition: .3s, width .01s;
+}
+#header-mobile .header-input:focus,
+#header-mobile .header-input:active {
+    background: #FFF;
+    color: #000;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.1);
+}
+#header-mobile .search-btn {
+    width: 40px;
+    height: 40px;
+    background: url(http://cbwconline.com/IMG/Codepen/Search-White.svg) center no-repeat;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#header-mobile .search-btn.close {
+    background: url(http://cbwconline.com/IMG/Codepen/Close-White.svg) center no-repeat;
+}
+#header-mobile .search-btn {
+    margin-left: auto;
+}
+.mobile-search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #EEE;
+    transition: transform .3s;
+    transform: translateY(100%);
+    z-index: 200;
+}
+.ios-web-app .mobile-search {
+    border-top: 20px solid #d0d0d0;
+}
+.mobile-search.searching {
+    transform: translateY(0);
+}
+.mobile-search-hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s
+}
+.mobile-search-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mobile-search .mobile-search-header {
+    background: #fff;
+    height: 64px;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+}
+.mobile-search .mobile-search-header .mobile-search-back {
+    width: 58px;
+    height: 58px;
+    margin-left: 10px;
+    background: url(http://cbwconline.com/IMG/Codepen/Arrow-Back-Black.svg) center no-repeat;
+}
+.mobile-search .mobile-search-header .mobile-search-input {
+    color: #444;
+    font-size: 16px;
+    margin-left: 5px;
+    width: calc(100vw - 100px);
+}
+.mobile-search .mobile-search-header .mobile-search-input::-webkit-input-placeholder {
+    color: #444;
+    font-size: 16px;
+    text-align: left;
+}
+.mobile-search .mobile-search-header .mobile-search-input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    text-align: center;
+}
+.mobile-search .mobile-search-header .mobile-search-input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    text-align: center;
+}
+#header-mobile ul {
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+#header-mobile li {
+    flex-shrink: 0;
+    list-style: none;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+}
+#header-mobile li.active {
+    color: #FFF;
+}
+.side-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #FFF;
+    height: 100%;
+    width: 225px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateX(-100%) translateZ(0);
+    transition: .3s;
+    overflow-y: auto;
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+}
+.side-menu.active {
+    transform: translateX(0) translateZ(0);
+}
+.side-menu.active ~ header .menu {
+    width: 0px;
+    margin: 12px 8px;
+}
+.side-menu .menu-holder {
+    display: flex;
+    align-items: center;
+}
+.side-menu .menu-holder span {
+    color: #FF5722;
+}
+.side-menu .menu {
+    background: url(http://cbwconline.com/IMG/Codepen/Menu-Black.svg) center no-repeat;
+}
+.side-menu .menu:hover {
+    background-color: #EEE;
+}
+.side-menu li {
+    list-style: none;
+    color: #212121;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 0 10px 18px;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 24px;
+    transition: .2s;
+}
+.side-menu li:hover {
+    background: #EEE;
+}
+.side-menu li.active {
+    color: #FF5722;
+    background: #F5F5F5;
+}
+.side-menu .cta {
+    display: block;
+    background: #536DFE;
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+.side-menu-overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+@media (max-width: 1000px) {
+    .side-menu.active ~ header .header-input {
+        width: calc(50vw - 100px);
+    }
+}
+@media (max-width: 700px) {
+    .search-flex {
+        min-width: 0 !important;
+    }
+}
+@media (max-width: 767px) {
+    .side-menu.active ~ header .menu {
+        margin: 12px;
+        width: 40px;
+    }
+    .side-menu.active ~ header {
+        width: 100% !important;
+    }
+    .side-menu.active ~ header .header-input {
+        width: 50vw;
+    }
+    .side-menu.active ~ .side-menu-overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@media (max-width: 599px) {
+    .mobile-only {
+        display: inherit;
+    }
+    .profile {
+        margin: 16px !important;
+    }
+    #header-mobile .header-input {
+        display: none;
+        padding: 0px 12px;
+        font: 400 16px/18px Roboto !important;
+        width: calc(100vw - 130px);
+    }
+    .mobile-input #header-mobile h1,
+    .mobile-input #header-mobile .menu {
+        display: none;
+    }
+    .mobile-input input {
+        display: initial;
+    }
+}
+@media (max-width: 480px) {} .ios * {
+    cursor: pointer;
 }

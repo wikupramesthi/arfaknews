@@ -3,13 +3,21 @@
    //echo '<pre>';print_r($newsDetail);
  ?>
 
-  <div class="container content-wrapper">
+  <div class="container content-wrapper single-post">
    <div class="row">
-      <div class="col col_9_of_12 content single-post">
+      <div class="col col_9_of_12 content">
          <article class="post">
-               <h1 class="entry_title"><?=$newsDetail->judul;?></h1>
-            <div class="entry_media">   
+          <div class="breadcumb">
+             <span class="meta_home"><a href="<?=base_url();?>">Home</a></span>
+             <span class="meta_arrow">News</span>
+             <span class="meta_arrow">Nasional</span>
+          </div>
+           <h1 class="entry_title"><?=$newsDetail->judul;?></h1>
+           <p class="editor-name">Oleh <span><?=$newsDetail->penulis;?></span></p>
+            <div class="entry_media"> 
+               <a href="<?=base_url();?>statis/dinamis/detail/<?=$newsDetail->gambar_detail;?>" title="<?=$newsDetail->caption;?>" data-fancybox>  
                 <img src="<?=base_url();?>statis/dinamis/detail/<?=$newsDetail->gambar_detail;?>" title="<?=$newsDetail->judul;?>" alt="">
+               </a>
             </div>
             <div class="full_meta clearfix">
                 <span class="meta_date"><?=date('d F Y', strtotime($newsDetail->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?></span>
@@ -84,9 +92,12 @@
         </div>
     </div>
 
-
 <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=59821c2b862d5e001108543c&product=inline-share-buttons">
 </script>
+
+
+<script type="text/javascript" src="<?=base_url();?>assets/js/front/jquery.3-1-1.min.js"></script>
+<script src="<?=base_url();?>assets/js/front/ygyzop.js"></script> 
 
 <?php
 $this->load->view('landing/footer.php');

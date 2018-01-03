@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang = "en">
+<html lang="en">
     <head>
     <title><?=$newsDetail->judul;?> | Arfaknews</title>
     <meta charset="UTF-8">
@@ -26,11 +26,8 @@
     <meta property="og:url" content="http://www.arfaknews.com/" />
     <meta property="og:type" content="website" />
 
-        <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-        <!-- Stylesheets -->
-
+        
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300,300italic,400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/front/normalize.css">
@@ -38,6 +35,7 @@
         <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/front/weather.css">
         <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/front/typography.css">
         <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/front/style.css">
+        <link rel="stylesheet prefetch" href="<?=base_url();?>assets/css/front/ygyzop.css">
         
         <!-- Responsive -->
         <link rel="stylesheet" type="text/css" media="(max-width:768px)" href="<?=base_url();?>assets/css/front/responsive-0.css">
@@ -49,7 +47,9 @@
   
   <body>
     <div id="wrapper" class="wide">            
-        <!-- Header -->
+      <?php
+         $this->load->view('landing/header-mobile.php');
+       ?>
         <header id="header" role="banner">                
             <div class="header_meta">
                 <div class="container">

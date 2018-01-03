@@ -1,25 +1,25 @@
 <footer id="footer">
  <div id="copyright" role="contentinfo">
             <div class="container">
-                <p>Copyright &copy 2017. Arfaknews.com, All Rights Reserved.</p>
+                <p>Copyright &copy 2018. Arfaknews.com, All Rights Reserved.</p>
             </div>
         </div
   </footer>
 
 </div>
 
-  <!-- Scripts -->
-
+    <!-- Scripts -->
     <script type="text/javascript" src="<?=base_url();?>assets/js/front/jqueryscript.min.js"></script>
     <script type="text/javascript" src="<?=base_url();?>assets/js/front/jqueryuiscript.min.js"></script>
     <script type="text/javascript" src="<?=base_url();?>assets/js/front/easing.min.js"></script>        
     <script type="text/javascript" src="<?=base_url();?>assets/js/front/smoothscroll.min.js"></script> 
-     <script type="text/javascript" src="<?=base_url();?>assets/js//front/theia-sticky-sidebar.min.js"></script>      
+    <script type="text/javascript" src="<?=base_url();?>assets/js//front/theia-sticky-sidebar.min.js"></script>      
     <script type="text/javascript" src="<?=base_url();?>assets/js/front/magnific.min.js"></script>        
     <script type="text/javascript" src="<?=base_url();?>assets/js/front/bxslider.min.js"></script>        
     <script type="text/javascript" src="<?=base_url();?>assets/js/front/fitvids.min.js"></script>
     <script type="text/javascript" src="<?=base_url();?>assets/js/front/viewportchecker.min.js"></script>        
-    <script type="text/javascript" src="<?=base_url();?>assets/js/front/init.js"></script>      
+    <script type="text/javascript" src="<?=base_url();?>assets/js/front/init.js"></script>    
+    <script type="text/javascript" src="<?=base_url();?>assets/js/front/mobile.js"></script>  
 
     <div id="fb-root"></div>
       <script>(function(d, s, id) {

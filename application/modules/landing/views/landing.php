@@ -3,7 +3,7 @@ $this->load->view('landing/header.php');
 //echo '<pre>';print_r($featured);die;
 ?>
 
- <div class="container content-wrapper">
+ <div class="container content-wrapper landing">
   <div class="row">
    <div class="col col_9_of_12 content">
    <div class="content_slider">
@@ -85,7 +85,7 @@ $this->load->view('landing/header.php');
   </div>
 
   <div class="row">
-    <div class="col col_12_of_12">
+    <div class="col col_12_of_12 mb-inner">
         <div class="multipack clearfix">
           <div class="layout_post_1">
               <div class="item_thumb">

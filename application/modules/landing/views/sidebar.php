@@ -19,7 +19,7 @@
                     <div class="item_meta sidebar_meta clearfix">
                         <span class="category"><a href="<?=base_url().'channel/'.$row->id.'/'.$row->nama_channel?>""><?=$row->nama_channel;?></a>
                        </span>
-                        <span class="meta_date"><?=date('d F Y', strtotime($row->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?></span>
+                        <span class="meta_date"><?=date('F d, Y', strtotime($row->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?></span>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
               foreach ($kutipan as $row) {
             ?>
             <article>
-                <span class="date"><?=date('d F Y', strtotime($row->tanggal_tayang));?></span>
+                <span class="date"><?=date('F d, Y', strtotime($row->tanggal_tayang));?></span>
                 <span class="time"><?=date('H:m', strtotime($row->waktu));?></span>
                 <div class="timeline_content">
                     <i class="fa fa-clock-o" jquery=""></i>
@@ -70,7 +70,7 @@
                     <div class="item_meta sidebar_meta clearfix">
                         <span class="category"><a href="<?=base_url().'channel/'.$row->id.'/'.$row->nama_channel?>""><?=$row->nama_channel;?></a>
                        </span>
-                        <span class="meta_date"><?=date('d F Y', strtotime($row->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?></span>
+                        <span class="meta_date"><?=date('F d, Y', strtotime($row->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?></span>
                   </div>
                 </div>
             </li>

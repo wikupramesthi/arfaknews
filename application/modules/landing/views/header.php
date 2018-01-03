@@ -22,10 +22,7 @@
     <meta property="og:url" content="http://www.arfaknews.com/" />
     <meta property="og:type" content="website" />
 
-        <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-        <!-- Stylesheets -->
 
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300,300italic,400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
@@ -44,8 +41,10 @@
  </head>
   
   <body>
-    <div id="wrapper" class="wide">            
-        <!-- Header -->
+    <div id="wrapper" class="wide">
+      <?php
+       $this->load->view('landing/header-mobile.php');
+      ?>
         <header id="header" role="banner">                
             <div class="header_meta">
                 <div class="container">

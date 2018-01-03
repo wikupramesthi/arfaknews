@@ -219,7 +219,7 @@ nav.site_navigation ul.menu > li > .cart_content .buttons .btn {
     Single layout
 ------------------------------------------------------------------------------*/
 article.post h1.entry_title {
-    font-size: 24px;
+    font-size: 21px;
     line-height: 32px
 }
 
@@ -253,6 +253,10 @@ blockquote p {
     margin-right:  -15px;
 }
 
+.item_meta span {
+    font-size: 10px;
+}
+
  .layout_post_1 .item_thumb, .layout_post_2 .item_thumb {
     width: 75px;
     position: relative;
@@ -267,7 +271,7 @@ blockquote p {
     font-weight: 700;
     line-height: 18px;
     margin: 0;
-    padding-bottom: 3px;
+    padding-bottom: 0px;
 }
 
 .layout_post_1 .item_content p, .layout_post_2 .item_content p {
