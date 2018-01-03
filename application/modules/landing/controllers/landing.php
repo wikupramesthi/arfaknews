@@ -90,7 +90,7 @@ class Landing extends MX_Controller {
                                     'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
 
         /*Side bar*/
-        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
+        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','0','5',
                             'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['hot'] = $this->all_model->get_data('tbl_berita','hot','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
