@@ -70,19 +70,19 @@ class Landing extends MX_Controller {
                                 'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         }
 
-        /*$data['featured'] = $this->all_model->get_data('tbl_berita','featured','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'asc','','',
-                            'tbl_channel','tbl_channel.id = tbl_berita.id_channel');*/
-        $data['featured'] = $this->all_model->jalankan_query_manual_select("SELECT * FROM tbl_berita a
-                            JOIN tbl_channel b ON a.id_channel = b.id
-                            WHERE id_berita in
-                            (
-                                SELECT
-                                (SELECT b.id_berita FROM tbl_berita b WHERE b.id_channel = a.id AND publish = '1'
-                                ORDER BY CONCAT(b.tanggal_tayang,' ',b.waktu) desc LIMIT 1) id_berita
-                                FROM tbl_channel a
-                            )
-                            ORDER BY CONCAT(tanggal_tayang,' ',waktu) DESC
-                            ")->result();
+        $data['featured'] = $this->all_model->get_data('tbl_berita','featured','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'asc','','',
+                            'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
+        // $data['featured'] = $this->all_model->jalankan_query_manual_select("SELECT * FROM tbl_berita a
+        //                     JOIN tbl_channel b ON a.id_channel = b.id
+        //                     WHERE id_berita in
+        //                     (
+        //                         SELECT
+        //                         (SELECT b.id_berita FROM tbl_berita b WHERE b.id_channel = a.id AND publish = '1'
+        //                         ORDER BY CONCAT(b.tanggal_tayang,' ',b.waktu) desc LIMIT 1) id_berita
+        //                         FROM tbl_channel a
+        //                     )
+        //                     ORDER BY CONCAT(tanggal_tayang,' ',waktu) DESC
+        //                     ")->result();
 
         $data['terbaru'] = $this->all_model->get_data('tbl_berita','','',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','0','1',
                                     'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
