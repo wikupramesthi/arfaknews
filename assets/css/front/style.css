@@ -2604,7 +2604,7 @@ nav.site_navigation ul.cart_list li .quantity {
     content: "\f08a"
 }
 .mg-zero {
-    
+    margin: 0;
 }
 /* Span format */
 span.format {
