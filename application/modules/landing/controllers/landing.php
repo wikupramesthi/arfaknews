@@ -70,7 +70,7 @@ class Landing extends MX_Controller {
                                 'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         }
 
-        $data['featured'] = $this->all_model->get_data('tbl_berita','featured','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'asc','','',
+        $data['featured'] = $this->all_model->get_data('tbl_berita','featured','1','5',"CONCAT((tanggal_tayang),(' '),(waktu))",'asc','','',
                             'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         // $data['featured'] = $this->all_model->jalankan_query_manual_select("SELECT * FROM tbl_berita a
         //                     JOIN tbl_channel b ON a.id_channel = b.id
