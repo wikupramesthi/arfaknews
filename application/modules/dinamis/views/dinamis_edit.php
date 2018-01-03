@@ -32,7 +32,7 @@
 	<div class="form-group">
 		<label class="col-sm-2 control-label">Lead</label>
 		<div class="col-sm-10">
-			<textarea name="lead" class="form-control" rows="3" required><?=$dt->lead?></textarea>
+			<textarea name="lead" class="form-control" rows="3"><?=$dt->lead?></textarea>
 		</div>
 	</div>
 	<div class="form-group">

@@ -66,7 +66,7 @@ $this->load->view('landing/header.php');
                     <div class="item_meta clearfix">
                        <span class="category"><a href="<?=base_url().'channel/'.$row->id.'/'.$row->nama_channel?>"><?=$row->nama_channel;?></a>
                        </span>
-                        <span class="meta_date"><?=date('d F Y', strtotime($row->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?></span>
+                        <span class="meta_date mg-zero"><?=date('d F Y', strtotime($row->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?></span>
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@ $this->load->view('landing/header.php');
         <div class="layout_post_1">
             <div class="item_thumb">
                 <div class="thumb_hover">
-                   <a href="<?=base_url().'read/'.$row->id_berita.'/'.$row->nama_channel.'/'.url_title($row->judul,'-',TRUE);?>"><img src="statis/dinamis/medium/<?=$row->gambar_detail;?>" title="<?=$row->judul;?>" alt=""></a>
+                   <a href="<?=base_url().'read/'.$row->id_berita.'/'.$row->nama_channel.'/'.url_title($row->judul,'-',TRUE);?>"><img src="statis/dinamis/detail/<?=$row->gambar_detail;?>" title="<?=$row->judul;?>" alt=""></a>
                 </div>
             </div>
             <div class="item_content">
@@ -305,7 +305,7 @@ $this->load->view('landing/header.php');
                 <h4><a href="<?=base_url().'read/'.$row->id_berita.'/'.$row->nama_channel.'/'.url_title($row->judul,'-',TRUE);?>"><?=$row->judul;?></a></h4>
                 </div>
                 <div class="item_meta clearfix">
-                    <span class="meta_date small"><?=date('d F Y', strtotime($row->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?></span>
+                    <span class="meta_date mg-zero small"><?=date('d F Y', strtotime($row->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?></span>
                 </div>
             </div>
         </div>
