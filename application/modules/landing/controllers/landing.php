@@ -122,7 +122,7 @@ class Landing extends MX_Controller {
         $data['releated'] = $this->all_model->search_news($key,$start,$limit,$id_channel,$id_berita)->result();
 
        /*Side bar*/
-        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
+        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','0','5',
                             'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['hot'] = $this->all_model->get_data('tbl_berita','hot','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','1',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
@@ -186,7 +186,7 @@ class Landing extends MX_Controller {
         $data['category'] = $this->all_model->lihat_tabel_kondisi_all("tbl_channel","where tipe = '2' and flag = '1' order by id ASC")->result();
 
         /*Side bar*/
-        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
+        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','0','5',
                             'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['hot'] = $this->all_model->get_data('tbl_berita','hot','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','1',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
@@ -258,7 +258,7 @@ class Landing extends MX_Controller {
         $data['pages'] = ceil($numRow->num_rows()/$limit);
 
        /*Side bar*/
-        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
+        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','0','5',
                             'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['hot'] = $this->all_model->get_data('tbl_berita','hot','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','1',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
@@ -317,7 +317,7 @@ class Landing extends MX_Controller {
         $data['pages'] = ceil($numRow->num_rows()/$limit);
 
        /*Side bar*/
-        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
+        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','0','5',
                             'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['hot'] = $this->all_model->get_data('tbl_berita','hot','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','1',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
@@ -345,7 +345,7 @@ function sitemap()
         $data['content'] = $this->all_model->get_single_data('tbl_statis','judul',urldecode($judul));
 
          /*Side bar*/
-        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
+        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','0','5',
                             'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['hot'] = $this->all_model->get_data('tbl_berita','hot','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','1',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
