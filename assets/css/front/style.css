@@ -1356,9 +1356,6 @@ ul.children {
     -ms-transform: rotate(360deg);
     transform: rotate(360deg)
 }
-.list_posts .post:hover .item_thumb img {
-    opacity: 0.3
-}
 .list_posts .post .item_thumb .thumb_hover a {
     display: block
 }
@@ -3415,7 +3412,7 @@ nav.site_navigation ul.menu > li > a {
 }
 
 .red-text {
-    color: #f85050;
+    color: #f85050
 }
 /*mobile */
 #header-mobile {
