@@ -93,6 +93,7 @@ $route['channel/(:any)/(:any)'] = "landing/view_channel/$1/$2";
 $route['most-recent'] = "landing/view_recent";
 $route['tagging'] = "landing/view_tagging";
 $route['page/(:any)'] = "landing/view_page/$1";
+$route['contact-us'] = "landing/contact_us";
 $route['sitemap\.xml'] = "landing/sitemap";
 
 

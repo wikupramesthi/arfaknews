@@ -268,7 +268,7 @@ $this->load->view('landing/header.php');
                           </div>
                       </div>
                       <div class="item_content">
-                          <h4><a href="<?=base_url().'read/'.$row->id_berita.'/'.$row->nama_channel.'/'.url_title($row->judul,'-',TRUE);?>">A<?=$row->judul;?></a></h4>
+                          <h4><a href="<?=base_url().'read/'.$row->id_berita.'/'.$row->nama_channel.'/'.url_title($row->judul,'-',TRUE);?>"><?=$row->judul;?></a></h4>
                           <div class="item_meta clearfix">
                               <span class="meta_date"><?=date('d F Y', strtotime($row->tanggal_tayang));?> <?=date('H:m', strtotime($row->waktu));?>
                               </span>

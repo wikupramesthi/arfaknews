@@ -20,6 +20,9 @@
                 <li>
                     <a href="<?=base_url()?>channel/insert">Tambah Kategori</a>
                 </li>
+                <li>
+                    <a href="<?=base_url()?>category">Sub Kategori</a>
+                </li>
             </ul>
         </li>
         <?php } ?>

@@ -3,7 +3,7 @@
    //echo '<pre>';print_r($newsDetail);
  ?>
 
-  <div class="container content-wrapper single-post">
+  <div class="container content-wrapper">
    <div class="row">
       <div class="col col_9_of_12 content">
          <article class="post">

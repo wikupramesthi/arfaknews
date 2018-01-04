@@ -98,7 +98,7 @@ class Landing extends MX_Controller {
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['breaking'] = $this->all_model->get_data('tbl_berita','breaking','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','4',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
-        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','4',
+        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
 
         $data['pop_tag'] = $this->all_model->get_data('tbl_tag','','','tanggal','desc','1','12','tbl_channel','tbl_channel.id = tbl_tag.id_channel');
@@ -128,7 +128,7 @@ class Landing extends MX_Controller {
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['kutipan'] = $this->all_model->get_data('tbl_berita','','',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
-        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','4',
+        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['pop_tag'] = $this->all_model->get_data('tbl_tag','','','tanggal','desc','1','12','tbl_channel','tbl_channel.id = tbl_tag.id_channel');
 
@@ -192,7 +192,7 @@ class Landing extends MX_Controller {
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['kutipan'] = $this->all_model->get_data('tbl_berita','','',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
-        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','4',
+        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['pop_tag'] = $this->all_model->get_data('tbl_tag','','','tanggal','desc','1','12','tbl_channel','tbl_channel.id = tbl_tag.id_channel');
 
@@ -264,7 +264,7 @@ class Landing extends MX_Controller {
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['kutipan'] = $this->all_model->get_data('tbl_berita','','',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
-        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','4',
+        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['pop_tag'] = $this->all_model->get_data('tbl_tag','','','tanggal','desc','1','12','tbl_channel','tbl_channel.id = tbl_tag.id_channel');
 
@@ -323,7 +323,7 @@ class Landing extends MX_Controller {
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['kutipan'] = $this->all_model->get_data('tbl_berita','','',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
-        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','4',
+        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['pop_tag'] = $this->all_model->get_data('tbl_tag','','','tanggal','desc','1','12','tbl_channel','tbl_channel.id = tbl_tag.id_channel');
 
@@ -351,12 +351,32 @@ function sitemap()
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['kutipan'] = $this->all_model->get_data('tbl_berita','','',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
-        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','4',
+        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
                         'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
         $data['pop_tag'] = $this->all_model->get_data('tbl_tag','','','tanggal','desc','1','12','tbl_channel','tbl_channel.id = tbl_tag.id_channel');
 
         $this->load->view("page",$data);
     }
+
+    function contact_us()
+    {
+
+       $data['category'] = $this->all_model->lihat_tabel_kondisi_all("tbl_channel","where tipe = '2' and flag = '1' order by id ASC")->result();
+
+       /*Side bar*/
+        $data['headline'] = $this->all_model->get_data('tbl_berita','headline','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','0','5',
+                            'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
+        $data['hot'] = $this->all_model->get_data('tbl_berita','hot','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','1',
+                        'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
+        $data['kutipan'] = $this->all_model->get_data('tbl_berita','','',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
+                        'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
+        $data['editor'] = $this->all_model->get_data('tbl_berita','analisis','1',"CONCAT((tanggal_tayang),(' '),(waktu))",'desc','1','5',
+                        'tbl_channel','tbl_channel.id = tbl_berita.id_channel');
+        $data['pop_tag'] = $this->all_model->get_data('tbl_tag','','','tanggal','desc','1','12','tbl_channel','tbl_channel.id = tbl_tag.id_channel');
+
+        $this->load->view('contact',$data);
+    }
+
 
 
 }

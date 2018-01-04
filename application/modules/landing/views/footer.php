@@ -1,7 +1,12 @@
 <footer id="footer">
  <div id="copyright" role="contentinfo">
             <div class="container">
-                <p>Copyright &copy 2018. Arfaknews.com, All Rights Reserved.</p>
+                <p class="pull-left clearfix">Copyright &copy 2018. Arfaknews.com, All Rights Reserved.</p>
+                 <div class="footer-right pull-right">
+                        <ul class="llist-unstyled">
+                            <li><a href="<?php base_url();?>contact-us">Kontak</a></li>
+                        
+                    </div>
             </div>
         </div
   </footer>

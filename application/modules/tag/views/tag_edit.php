@@ -15,7 +15,7 @@
 		<div class="col-sm-5">
 			<select name="idchannel" class="form-control" required>
 				<option value="">Pilih Kategori</option>
-				<? foreach($cat->result_array() as $r){ ?>
+				<?php foreach($cat->result_array() as $r){ ?>
 				<option value="<?=$r['id']?>" <?= $d->id_channel == $r['id'] ? 'selected="selected"' : '' ?>><?=ucfirst($r['nama_channel'])?></option>
 				<? } ?>
 			</select>

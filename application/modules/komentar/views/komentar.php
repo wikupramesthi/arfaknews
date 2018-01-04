@@ -17,6 +17,7 @@
 			<th class="tc">Judul Berita</th>
 			<?php } ?>
 			<th class="tc">Nama</th>
+			<th class="tc">No. Telepon</th>
 			<th class="tc">Email</th>
 			<th class="tc"><?=$this->uri->segment(1) == 'komentar' ? 'Komentar' : 'Pesan/Saran' ?></th>
 			<?php if ($this->uri->segment(1) == 'komentar'){?>

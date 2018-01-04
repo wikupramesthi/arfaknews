@@ -447,7 +447,7 @@ table.dataTable thead .sorting:after {
     border-right-width: 14px;
     border-left-width: 0;
   }
-  ul.nav.navbar-top-links.navbar-right.in {
+  ul.nav.navbar-top-links.navbar-right.in, ul.nav.navbar-top-links.navbar-right {
     display: none;
  }
 }

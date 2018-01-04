@@ -10,11 +10,11 @@
 	<div class="bs-callout bs-callout-danger">
 		<form method="post" role="form" action="<?php echo base_url(); ?>dinamis/create" enctype="multipart/form-data" class="form-horizontal">
 			<?php if ($cat->result_array() != NULL){ ?>
-			<div class="form-group" style="display: none">
-				<label class="col-sm-2 control-label">Nama Kategori</label>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Nama Sub Kategori</label>
 				<div class="col-sm-5">
-					<select name="idcategory" class="form-control" required>
-						<option value="">Pilih Kategori</option>
+					<select name="idcategory" class="form-control">
+						<option value="">Pilih Sub Kategori</option>
 						<?php foreach($cat->result_array() as $r){ ?>
 						<option value="<?=$r['id']?>" selected><?=ucfirst($r['nama'])?></option>
 						<?php } ?>
