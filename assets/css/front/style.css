@@ -3414,6 +3414,9 @@ nav.site_navigation ul.menu > li > a {
     margin: 0
 }
 
+.red-text {
+    color: #f85050;
+}
 /*mobile */
 #header-mobile {
     display: flex;

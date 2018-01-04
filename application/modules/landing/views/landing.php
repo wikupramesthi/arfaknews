@@ -353,9 +353,7 @@ $this->load->view('landing/header.php');
   </div>
 </div>
 
-          
       </div>
-
 
 </div>
 
