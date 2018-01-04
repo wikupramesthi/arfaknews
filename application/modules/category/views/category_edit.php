@@ -16,7 +16,7 @@
 				<option value="">Pilih</option>
 				<?php foreach($ch->result_array() as $r){ ?>
 				<option value="<?=$r['id']?>" <?= $d->id_channel == $r['id'] ? 'selected="selected"' : '' ?>><?=ucfirst($r['nama_channel'])?></option>
-				<? } ?>
+				<?php } ?>
 			</select>
 		</div>
 	</div>

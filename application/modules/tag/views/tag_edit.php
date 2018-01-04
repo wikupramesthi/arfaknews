@@ -17,7 +17,7 @@
 				<option value="">Pilih Kategori</option>
 				<?php foreach($cat->result_array() as $r){ ?>
 				<option value="<?=$r['id']?>" <?= $d->id_channel == $r['id'] ? 'selected="selected"' : '' ?>><?=ucfirst($r['nama_channel'])?></option>
-				<? } ?>
+				<?php } ?>
 			</select>
 		</div>
 	</div>
