@@ -28,7 +28,7 @@
                    <blockquote>
                         <p><span>''</span><?=$newsDetail->caption;?><span>''</span></p>
                     </blockquote>
-                  <p class="dropcap"><?=$newsDetail->isi;?>.</p>              
+                  <p class="dropcap"><?=$newsDetail->isi;?></p>              
                 </div>
                                
                  <div class="bottom_wrapper">
